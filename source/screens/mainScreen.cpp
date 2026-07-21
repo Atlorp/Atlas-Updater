@@ -43,29 +43,29 @@ extern void notConnectedMsg();
 
 	Initialized meta, store and StoreEntry class and:
 
-	- Downloads Universal-DB.. in case nothing exist.
+	- Downloads Atlas-DB.. in case nothing exist.
 */
 MainScreen::MainScreen() {
 	Msg::DisplayMsg(Lang::get("LOADING_UNISTORE"));
 
 	/* Check if lastStore is accessible. */
 	if (config->lastStore() == "")
-		config->lastStore("universal-db.unistore");
+		config->lastStore("atlas-db.unistore");
 
 	if (access((_STORE_PATH + config->lastStore()).c_str(), F_OK) != 0) {
-		config->lastStore("universal-db.unistore");
+		config->lastStore("atlas-db.unistore");
 
 	} else {
 		/* check version and file here. */
 		const UniStoreInfo info = GetInfo((_STORE_PATH + config->lastStore()), config->lastStore());
 
 		if (info.Version != 3 && info.Version != _UNISTORE_VERSION) {
-			config->lastStore("universal-db.unistore");
+			config->lastStore("atlas-db.unistore");
 		}
 
 		if (info.File != "") { // Ensure to check for this.
 			if ((info.File.find("/") != std::string::npos)) {
-				config->lastStore("universal-db.unistore"); // It does contain a '/' which is invalid.
+				config->lastStore("atlas-db.unistore"); // It does contain a '/' which is invalid.
 			}
 		}
 	}
@@ -74,7 +74,7 @@ MainScreen::MainScreen() {
 	std::string storePath = _STORE_PATH + config->lastStore();
 	if (access(storePath.c_str(), F_OK) != 0) {
 		if (checkWifiStatus()) {
-			DownloadUniStore("https://db.universal-team.net/unistore/universal-db.unistore", -1, Lang::get("DOWNLOADING_UNIVERSAL_DB"));
+			DownloadUniStore("https://atlorp.github.io/atlas-db/unistore/atlas-db.unistore", -1, Lang::get("DOWNLOADING_ATLAS_DB"));
 			updateMode = Store::UpdateMode::spritesheet;
 
 		} else {
@@ -85,8 +85,8 @@ MainScreen::MainScreen() {
 	StoreUtils::store = std::make_unique<Store>(storePath, config->lastStore(), updateMode);
 	if (!StoreUtils::store->GetValid()) {
 		if (checkWifiStatus()) {
-			config->lastStore("universal-db.unistore");
-			DownloadUniStore("https://db.universal-team.net/unistore/universal-db.unistore", -1, Lang::get("DOWNLOADING_UNIVERSAL_DB"));
+			config->lastStore("atlas-db.unistore");
+			DownloadUniStore("https://atlorp.github.io/atlas-db/unistore/atlas-db.unistore", -1, Lang::get("DOWNLOADING_ATLAS_DB"));
 			StoreUtils::store = std::make_unique<Store>(storePath, config->lastStore(), Store::UpdateMode::spritesheet);
 
 		} else {
