@@ -1,5 +1,15 @@
 # THIS IS A FORK OF UNIVERSAL UPDATER AND WILL REPLACE YOUR EXISTING UNIVERSAL UPDATER INSTALLATION
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=Atlorp%2FAtlas-Updater%2CAtlorp%2Fatlas-db&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Atlorp/Atlas-Updater%2CAtlorp/atlas-db&type=date&theme=dark&legend=top-left&sealed_token=Hh9-3ITBKq4DvI5PfiDfON4mSSJrjLRxHUjuAIrKfU1LrXluj1Nzsc4dSk7t553K31ynSZe9v52NAPWgsPcxmSZBQUMPDbpe0ZaMhWYFRXCt1USyQD6SPSZzJnoAnLlHtShSNMBLMkUn1b1PxXFqxru7hbHW7htktSyYCO_weYBWkJ6_-F-jb7A2NQ6A" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Atlorp/Atlas-Updater%2CAtlorp/atlas-db&type=date&legend=top-left&sealed_token=Hh9-3ITBKq4DvI5PfiDfON4mSSJrjLRxHUjuAIrKfU1LrXluj1Nzsc4dSk7t553K31ynSZe9v52NAPWgsPcxmSZBQUMPDbpe0ZaMhWYFRXCt1USyQD6SPSZzJnoAnLlHtShSNMBLMkUn1b1PxXFqxru7hbHW7htktSyYCO_weYBWkJ6_-F-jb7A2NQ6A" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Atlorp/Atlas-Updater%2CAtlorp/atlas-db&type=date&legend=top-left&sealed_token=Hh9-3ITBKq4DvI5PfiDfON4mSSJrjLRxHUjuAIrKfU1LrXluj1Nzsc4dSk7t553K31ynSZe9v52NAPWgsPcxmSZBQUMPDbpe0ZaMhWYFRXCt1USyQD6SPSZzJnoAnLlHtShSNMBLMkUn1b1PxXFqxru7hbHW7htktSyYCO_weYBWkJ6_-F-jb7A2NQ6A" />
+ </picture>
+</a>
+
 # original readme contents at the time of the fork
 
 <p align="center">
