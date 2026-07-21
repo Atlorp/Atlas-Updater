@@ -1,3 +1,7 @@
+# THIS IS A FORK OF UNIVERSAL UPDATER
+
+# original readme contents at the time of the fork
+
 <p align="center">
 	<a href="https://universal-team.net/projects/universal-updater.html"><img src="https://github.com/Universal-Team/Universal-Updater/raw/master/resources/2d-banner.png"></a><br>
 	<b>An easy to use app for installing and updating 3DS homebrew</b><br>
