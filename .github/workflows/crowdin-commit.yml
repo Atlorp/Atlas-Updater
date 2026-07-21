@@ -26,7 +26,7 @@ jobs:
       - name: Pull from Crowdin
         env:
           CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
-          UU_CROWDIN_ID: ${{ secrets.AU_CROWDIN_ID }}
+          AU_CROWDIN_ID: ${{ secrets.AU_CROWDIN_ID }}
         run: |
           ./crowdin-pull.sh
 
