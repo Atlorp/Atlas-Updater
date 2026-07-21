@@ -28,7 +28,7 @@
 	"CHANGE_NDS_PATH": "Change NDS path",
 	"CHANGE_SHORTCUT_PATH": "Change shortcut path",
 	"CHECK_UNISTORE_UPDATES": "Checking for UniStore updates...",
-	"CHECK_UU_UPDATES": "Checking for Atlas-Updater updates...",
+	"CHECK_AU_UPDATES": "Checking for Atlas-Updater updates...",
 	"CONNECT_WIFI": "Please Connect to WiFi.",
 	"CONNECTING_WIFI": "Connecting to WiFi...\n\nPlease Wait",
 	"CONSOLE": "Console",
