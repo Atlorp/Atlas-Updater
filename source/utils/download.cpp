@@ -765,8 +765,8 @@ UUUpdate IsUUUpdateAvailable(bool git, CURLcode *curlReturn) {
 	CURL *hnd = curl_easy_init();
 
 	const char *url;
-	if (git) url = "https://api.github.com/repos/Universal-Team/Universal-Updater/releases/tags/git";
-	else url = "https://db.universal-team.net/unistore/version.json";
+	if (git) url = "https://api.github.com/repos/atlorp/Atlas-Updater/releases/tags/git";
+	else url = "https://atlorp.github.io/atlas-db/unistore/version.json";
 
 	ret = setupContext(hnd, url);
 	if (ret != 0) {
@@ -985,7 +985,7 @@ void UpdateAction() {
 			}
 			Gui::Draw_Rect(0, 0, 400, 25, UIThemes->BarColor());
 			Gui::Draw_Rect(0, 25, 400, 1, UIThemes->BarOutline());
-			Gui::DrawStringCentered(0, 1, 0.7f, UIThemes->TextColor(), "Universal-Updater", 390, 0, font);
+			Gui::DrawStringCentered(0, 1, 0.7f, UIThemes->TextColor(), "Atlas-Updater", 390, 0, font);
 			Gui::Draw_Rect(0, 215, 400, 25, UIThemes->BarColor());
 			Gui::Draw_Rect(0, 214, 400, 1, UIThemes->BarOutline());
 			char updMsg[150];
@@ -1049,11 +1049,11 @@ void UpdateAction() {
 		Result dlRes;
 		// Download 3DSX to a temp file cause we can't overwrite RomFS or cURL dies
 		if (useGit)
-			dlRes = ScriptUtils::downloadFile("https://github.com/Universal-Team/Universal-Updater/releases/download/git/Universal-Updater." + std::string(is3DSX ? "3dsx" : "cia"),
-					(is3DSX ? (_3dsxPath + ".temp") : "sdmc:/Universal-Updater.cia"), Lang::get("DONLOADING_UNIVERSAL_UPDATER"), true);
+			dlRes = ScriptUtils::downloadFile("https://github.com/atlorp/Atlas-Updater/releases/download/git/Atlas-Updater." + std::string(is3DSX ? "3dsx" : "cia"),
+					(is3DSX ? (_3dsxPath + ".temp") : "sdmc:/Atlas-Updater.cia"), Lang::get("DONLOADING_ATLAS_UPDATER"), true);
 		else
-			dlRes = ScriptUtils::downloadRelease("Universal-Team/Universal-Updater", (is3DSX ? "Universal-Updater.3dsx" : "Universal-Updater.cia"),
-					(is3DSX ? (_3dsxPath + ".temp") : "sdmc:/Universal-Updater.cia"), false, Lang::get("DONLOADING_UNIVERSAL_UPDATER"), true);
+			dlRes = ScriptUtils::downloadRelease("atlorp/Atlas-Updater", (is3DSX ? "Atlas-Updater.3dsx" : "Atlas-Updater.cia"),
+					(is3DSX ? (_3dsxPath + ".temp") : "sdmc:/Atlas-Updater.cia"), false, Lang::get("DONLOADING_ATLAS_UPDATER"), true);
 
 		if (dlRes == ScriptState::NONE) {
 			if (is3DSX) {
@@ -1065,8 +1065,8 @@ void UpdateAction() {
 				return;
 			}
 
-			ScriptUtils::installFile("sdmc:/Universal-Updater.cia", false, Lang::get("INSTALL_UNIVERSAL_UPDATER"), true);
-			ScriptUtils::removeFile("sdmc:/Universal-Updater.cia", true);
+			ScriptUtils::installFile("sdmc:/Atlas-Updater.cia", false, Lang::get("INSTALL_ATLAS_UPDATER"), true);
+			ScriptUtils::removeFile("sdmc:/Atlas-Updater.cia", true);
 			Msg::waitMsg(Lang::get("UPDATE_DONE"));
 			exiting = true;
 		}
@@ -1106,7 +1106,7 @@ std::vector<StoreList> FetchStores() {
 
 	CURL *hnd = curl_easy_init();
 
-	ret = setupContext(hnd, "https://github.com/Universal-Team/Universal-Updater/raw/master/resources/UniStores.json");
+	ret = setupContext(hnd, "https://github.com/atlorp/Atlas-Updater/raw/master/resources/UniStores.json");
 	if (ret != 0)
 		goto cleanup;
 
@@ -1159,7 +1159,7 @@ nlohmann::json FetchThemes() {
 
 	CURL *hnd = curl_easy_init();
 
-	ret = setupContext(hnd, "https://github.com/Universal-Team/Universal-Updater/raw/master/resources/Themes.json");
+	ret = setupContext(hnd, "https://github.com/atlorp/Atlas-Updater/raw/master/resources/Themes.json");
 	if (ret != 0)
 		goto cleanup;
 
@@ -1266,7 +1266,7 @@ std::string GetChangelog() {
 
 	CURL *hnd = curl_easy_init();
 
-	ret = setupContext(hnd, "https://api.github.com/repos/Universal-Team/Universal-Updater/releases/latest");
+	ret = setupContext(hnd, "https://api.github.com/repos/atlorp/Atlas-Updater/releases/latest");
 	if (ret != 0) {
 		socExit();
 		free(result_buf);
