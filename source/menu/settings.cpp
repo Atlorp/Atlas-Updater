@@ -183,9 +183,9 @@ static void DrawAutoUpdate(int selection) {
 	Gui::DrawString(47, 75, 0.4f, UIThemes->TextColor(), Lang::get("AUTO_UPDATE_UNISTORE_DESC"), 265, 0, font, C2D_WordWrap);
 
 	Gui::Draw_Rect(40, 110, 280, 24, (selection == 1 ? UIThemes->MarkSelected() : UIThemes->MarkUnselected()));
-	Gui::DrawString(47, 114, 0.5f, UIThemes->TextColor(), Lang::get("AUTO_UPDATE_UU"), 210, 0, font);
+	Gui::DrawString(47, 114, 0.5f, UIThemes->TextColor(), Lang::get("AUTO_UPDATE_AU"), 210, 0, font);
 	GFX::DrawToggle(toggleAbles[1].x, toggleAbles[1].y, config->updatecheck());
-	Gui::DrawString(47, 141, 0.4f, UIThemes->TextColor(), Lang::get("AUTO_UPDATE_UU_DESC"), 265, 0, font, C2D_WordWrap);
+	Gui::DrawString(47, 141, 0.4f, UIThemes->TextColor(), Lang::get("AUTO_UPDATE_AU_DESC"), 265, 0, font, C2D_WordWrap);
 
 	Gui::Draw_Rect(40, 180, 280, 24, (selection == 2 ? UIThemes->MarkSelected() : UIThemes->MarkUnselected()));
 	Gui::DrawString(47, 184, 0.5f, UIThemes->TextColor(), Lang::get("AUTO_UPDATE_GIT"), 210, 0, font);
