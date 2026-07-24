@@ -191,7 +191,7 @@ void StoreUtils::DownloadHandle(const std::shared_ptr<StoreEntry> &entry, const 
 			if (is3DSX) { // Only allow if 3DSX.
 				if (StoreUtils::entries.size() <= 0) return; // Smaller than 0 -> No No.
 
-				if (Msg::promptMsg(Lang::get("CREATE_SHORTCUT"), "Universal-Updater/shortcut", true)) {
+				if (Msg::promptMsg(Lang::get("CREATE_SHORTCUT"), "Atlas-Updater/shortcut", true)) {
 					if (CreateShortcut(entry->GetTitle(), StoreUtils::store->GetDownloadIndex(), StoreUtils::store->GetFileName(), entry->GetAuthor())) {
 						Msg::waitMsg(Lang::get("SHORTCUT_CREATED"));
 					}
@@ -271,7 +271,7 @@ void StoreUtils::DownloadHandle(const std::shared_ptr<StoreEntry> &entry, const 
 			std::string PromptSaveKey = "";
 			if (types[StoreUtils::store->GetDownloadIndex()] == "git" || types[StoreUtils::store->GetDownloadIndex()] == "nightly") Msg += "\n\n" + Lang::get("NOTE_GIT");
 			else if (types[StoreUtils::store->GetDownloadIndex()] == "prerelease") Msg += "\n\n" + Lang::get("NOTE_PRERELEASE");
-			else PromptSaveKey = "Universal-Updater/confirm-install";
+			else PromptSaveKey = "Atlas-Updater/confirm-install";
 
 			const std::string &preinstallMessage = entry->GetPreinstallMessage();
 			std::string SecondMsg = preinstallMessage + "\n\n" + Lang::get("EXECUTE_ENTRY_WITH_MESSAGE");

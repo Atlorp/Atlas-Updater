@@ -45,9 +45,9 @@ static void InitForARG() {
 
 	/* Create Directories, if missing. */
 	mkdir("sdmc:/3ds", 0777);
-	mkdir("sdmc:/3ds/Universal-Updater", 0777);
-	mkdir("sdmc:/3ds/Universal-Updater/stores", 0777);
-	mkdir("sdmc:/3ds/Universal-Updater/shortcuts", 0777);
+	mkdir("sdmc:/3ds/Atlas-Updater", 0777);
+	mkdir("sdmc:/3ds/Atlas-Updater/stores", 0777);
+	mkdir("sdmc:/3ds/Atlas-Updater/shortcuts", 0777);
 
 	config = std::make_unique<Config>();
 	StoreUtils::meta = std::make_unique<Meta>();

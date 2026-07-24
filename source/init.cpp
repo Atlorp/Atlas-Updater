@@ -56,10 +56,10 @@ static void getCurrentUsage(){
 */
 static void InitMusic() {
 	if (access("sdmc:/3ds/dspfirm.cdc", F_OK) == 0) { // Ensure dspfirm dump exist.
-		if (access("sdmc:/3ds/Universal-Updater/music.wav", F_OK) == 0) { // Ensure music.wav exist.
+		if (access("sdmc:/3ds/Atlas-Updater/music.wav", F_OK) == 0) { // Ensure music.wav exist.
 			dspfirmFound = true;
 			ndspInit();
-			Music = std::make_unique<Sound>("sdmc:/3ds/Universal-Updater/music.wav");
+			Music = std::make_unique<Sound>("sdmc:/3ds/Atlas-Updater/music.wav");
 
 			Music->play();
 		}
@@ -94,8 +94,8 @@ bool touching(touchPosition touch, Structs::ButtonPos button) {
 void Init::LoadFont() {
 	if (config->customfont()) {
 		if (!needUnloadFont) {
-			if (access("sdmc:/3ds/Universal-Updater/font.bcfnt", F_OK) == 0) {
-				Gui::loadFont(font, "sdmc:/3ds/Universal-Updater/font.bcfnt");
+			if (access("sdmc:/3ds/Atlas-Updater/font.bcfnt", F_OK) == 0) {
+				Gui::loadFont(font, "sdmc:/3ds/Atlas-Updater/font.bcfnt");
 				needUnloadFont = true;
 			}
 		}
@@ -127,9 +127,9 @@ Result Init::Initialize() {
 
 	/* Create Directories, if missing. */
 	mkdir("sdmc:/3ds", 0777);
-	mkdir("sdmc:/3ds/Universal-Updater", 0777);
-	mkdir("sdmc:/3ds/Universal-Updater/stores", 0777);
-	mkdir("sdmc:/3ds/Universal-Updater/shortcuts", 0777);
+	mkdir("sdmc:/3ds/Atlas-Updater", 0777);
+	mkdir("sdmc:/3ds/Atlas-Updater/stores", 0777);
+	mkdir("sdmc:/3ds/Atlas-Updater/shortcuts", 0777);
 
 	/* Create title database, if missing. */
 	AM_InitializeExternalTitleDatabase(false);

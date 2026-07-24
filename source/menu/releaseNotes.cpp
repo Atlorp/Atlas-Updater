@@ -93,7 +93,7 @@ void StoreUtils::DrawReleaseNotes(const float &scrollOffset, const std::shared_p
 
 	std::string title;
 	if (config->changelog()) {
-		title = std::string("Universal-Updater ") + C_V;
+		title = std::string("Atlas-Updater ") + C_V;
 	} else {
 		title = entry->GetTitle();
 		if(entry->GetVersion() != "")

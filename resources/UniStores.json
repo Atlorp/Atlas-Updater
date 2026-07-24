@@ -1,4 +1,10 @@
 {
+	"Atlas-DB": {
+		"title": "Atlas-DB",
+		"author": "Atlorp",
+		"url": "https://atlorp.github.io/atlas-db/unistore/atlas-db.unistore",
+		"description": "An unrestricted database of 3DS and DS homebrew."
+	},
 	"TWiLight Menu++ Skins": {
 		"title": "TWiLight Menu++ Skins",
 		"author": "DS-Homebrew",
